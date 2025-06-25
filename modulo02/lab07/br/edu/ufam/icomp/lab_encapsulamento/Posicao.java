@@ -39,7 +39,6 @@ public class Posicao{
 
     @Override
     public String toString() {
-        return String.format(Locale.US,
-                        "Posição: %.6f, %.6f, %.1f", latitude, longitude, altitude);
+        return "Posição: " + getLatitude() + ", " + getLongitude() + ", " + getAltitude();
     }
 }
