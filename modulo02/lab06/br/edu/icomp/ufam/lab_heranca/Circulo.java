@@ -1,7 +1,5 @@
 package br.edu.icomp.ufam.lab_heranca;
 
-import java.util.Locale;
-
 public class Circulo extends FormaGeometrica {
     public double raio;
 
@@ -22,8 +20,7 @@ public class Circulo extends FormaGeometrica {
 
     @Override
     public String toString() {
-        return String.format(Locale.US,
-            "Círculo na posição (%d, %d) com raio de %.1fcm (área=%.14fcm2, perímetro=%.14fcm)",
-            posX, posY, raio, getArea(), getPerimetro());
+
+        return "Círculo na "+ getPosString() + " com raio de " + raio + "cm (área=" + getArea() + "cm2, perímetro=" + getPerimetro() + "cm)";
     }
 }
