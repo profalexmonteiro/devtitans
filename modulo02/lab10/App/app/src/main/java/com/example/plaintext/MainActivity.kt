@@ -102,9 +102,10 @@ fun Content(modifier: Modifier = Modifier) {
     var salvarInfo by remember { mutableStateOf(false) }
 
     Row ( modifier = modifier.fillMaxWidth()
-        .background(Color(0xFF8BC34A)),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically)
+        .background(Color.Green),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+        )
     {
         Image (
             painter = painterResource(id = R.drawable.ic_launcher_foreground),
@@ -112,31 +113,29 @@ fun Content(modifier: Modifier = Modifier) {
         )
 
         Text(
-            modifier = modifier.width(130.dp),
-            text = "The most secure password manager Bob and Alice",
+            text = "The most secure\n password manager\n Bob and Alice",
             fontSize = 16.sp,
             color = Color.Black,
             textAlign = TextAlign.Center,
         )
     }
 
+
     Column(
         modifier = Modifier
-            .padding(24.dp, top = 205.dp, 24.dp)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center
     ) {
 
 
+
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .align(Alignment.CenterHorizontally),
-            verticalArrangement = Arrangement.Center
+                .fillMaxSize().padding(20.dp),
+                verticalArrangement = Arrangement.Center
             ) {
 
             Text(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
                 text = "Digite suas credenciais para continuar",
                 fontSize = 16.sp,
                 color = Color.Black,
